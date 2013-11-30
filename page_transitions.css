@@ -1,0 +1,75 @@
+/** hide the body so we can fade it in all slick like
+    using css3 transforms for performance
+    http://coenraets.org/blog/2013/03/hardware-accelerated-page-transitions-for-mobile-web-apps-phonegap-apps/
+    **/
+.main-container { 
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
+  -webkit-transition-duration: .25s;
+  transition-duration: .25s;
+}
+
+.main-container.transition { 
+  -webkit-transition-duration: .25s;
+  transition-duration: .25s;
+}
+
+.main-container.active { 
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.main-container.out { 
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
+}
+
+
+
+/* CSS Spinner loader */
+.region.region-footer {
+  background: #e5e5e5;
+}
+
+.spinner-css {
+  top: 40%;
+  left: 35%;
+  position: absolute;
+
+  height:100px;
+  width:100px;
+-webkit-animation: rotation 1s infinite linear;
+-moz-animation: rotation 1s infinite linear;
+-o-animation: rotation 1s infinite linear;
+animation: rotation 1s infinite linear;
+border-left:4px solid rgba(255,14,16,.15);
+border-right:4px solid rgba(255,14,16,.15);
+border-bottom:4px solid rgba(255,14,16,.15);
+border-top:4px solid rgba(255,14,16,.8);
+border-radius:100%;
+}
+
+@-webkit-keyframes rotation {
+from {-webkit-transform: rotate(0deg);}
+to {-webkit-transform: rotate(359deg);}
+}
+
+@-moz-keyframes rotation {
+from {-moz-transform: rotate(0deg);}
+to {-moz-transform: rotate(359deg);}
+}
+
+@-o-keyframes rotation {
+from {-o-transform: rotate(0deg);}
+to {-o-transform: rotate(359deg);}
+}
+
+@keyframes rotation {
+from {transform: rotate(0deg);}
+to {transform: rotate(359deg);}
+}

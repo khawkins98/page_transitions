@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * Add makrup for a loading sprite to the footer.
+ **/
+
+function page_transitions_page_build(&$page) {
+  
+  drupal_add_css(drupal_get_path('module', 'page_transitions')  . '/page_transitions.css');
+  drupal_add_js(drupal_get_path('module', 'page_transitions')  . '/page_transitions.js');
+
+  $page['footer']['#sorted'] = FALSE;
+  
+  $page['footer']['spinner'] = array(
+    '#markup' => '<div class="spinner-css">
+                  <span class="side sp_left">
+                    <span class="fill"></span>
+                  </span>
+                      
+                  <span class="side sp_right">
+                    <span class="fill"></span>
+                  </span>
+
+                </div>', 
+      '#weight' => 25,
+    );
+  
+}

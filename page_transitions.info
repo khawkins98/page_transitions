@@ -1,0 +1,7 @@
+name = Page Transitions
+description = Uses hardware acceleratable CSS transforms to creat page transitions.
+package = User interface
+core = 7.x
+
+version = "7.x-1.x-dev"
+
